@@ -1,18 +1,18 @@
 #include<stdio.h>
 #include<string.h>
-#include<stdlib.h>				//调用system()
-#include<conio.h>				//调用getch()
+#include<stdlib.h>			//调用system()
+#include<conio.h>			//调用getch()
 #define ZHANGHAO 123456
 #define MIMA 123456
 void mainmenu();                	//主目录
-void query(int);				//查询函数
+void query(int);			//查询函数
 void querenmenu1(int);			//确认目录1
 void querenmenu2(int);			//确认目录2	
-int deposit(int);				//存款函数1	
+int deposit(int);			//存款函数1	
 int deposit1();				//存款函数2
-int withdraw(int);				//取款函数1
-int withdraw1();				//取款函数2
-int change(int);				//修改密码函数
+int withdraw(int);			//取款函数1
+int withdraw1();			//取款函数2
+int change(int);			//修改密码函数
 int main(void)
 {
 	int zhanghao,mima;
@@ -71,7 +71,8 @@ int main(void)
 			case '2':money=deposit(money);break;	
 			case '3':money=withdraw(money);break;	
 			case '4':mima=change(mima);break;		
-			case '5':printf("欢迎再次使用\n");return 0;		}
+			case '5':printf("欢迎再次使用\n");return 0;		
+		}
 	}
 	return 0;
 }
@@ -161,7 +162,8 @@ int withdraw(int money)
 			switch(in)
 			{	
 			   case '1':exit=1;break;
-			   case '2':input=withdraw1();exit=1;break;    			   case '3':input=0;exit=1;break;
+			   case '2':input=withdraw1();exit=1;break;    			   
+			   case '3':input=0;exit=1;break;
 			}
 		}
 		if(input<=money)
